@@ -2,8 +2,8 @@
 #include<stdio.h>
 #include "board.h"
 
-const int row_number = 3;
-const int line_number = 3;
+const int n_row = 3;
+const int n_line = 3;
 
 
 int main(int argc, char** argv) {
@@ -15,11 +15,11 @@ int main(int argc, char** argv) {
     for (int i = 0; i < 3; i++) {
         printf("Nom %d: %s\n", i + 1, line[i]);
     }
-    printf("Nombre de colonne : %d, nombre de ligne : %d\n", row_number, line_number);
+    printf("Nombre de colonne : %d, nombre de ligne : %d\n", n_row, n_line);
 
     printf("Création du plateau\n");
     fflush(stdout);
-    board_t board = create_board(2, 2, 2, 2);
+    board_t board = create_board(n_line, n_row, 2, 2);
 
     printf("Test de la fonction #board_push()\n");
     fflush(stdout);
