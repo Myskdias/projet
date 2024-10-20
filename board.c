@@ -178,4 +178,34 @@ void print_team(board_t* board, int line, int row) {
     printf("%c%c%c", team, team, team);
 }
 
+//Dessine le plateau
+void board_print(board_t* board, int highlighted_line) {
+    print_first_line(board);
+    print_raws_name(board);
+
+
+
+    print_raws_name(board);
+}
+
+void print_first_line(board_t* board) {
+
+}
+
+void print_raws_name(board_t* board) {
+
+}
+
+void print_line(board_t* board, int line) {
+
+}
+
+void print_line_beginning(board_t* board, int line) {
+
+}
+
+//the h stands for highlighted
+void print_hline_beginning(board_t* board, int line) {
+    
+}
 
