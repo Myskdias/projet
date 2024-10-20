@@ -29,6 +29,7 @@ CMakeFiles/Projet_exe.dir/board.c.o: /home/adele/Bureau/projet/board.c \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
- /usr/include/bits/stdio_lim.h /home/adele/Bureau/projet/board.h \
- /home/adele/Bureau/projet/cell.h \
+ /usr/include/bits/stdio_lim.h /usr/include/ctype.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /home/adele/Bureau/projet/board.h /home/adele/Bureau/projet/cell.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h

@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include<stdio.h>
 #include "board.h"
 
@@ -23,6 +24,8 @@ int main(int argc, char** argv) {
     printf("Test de la fonction #board_push()\n");
     fflush(stdout);
     board_push(&board, 0, 0, 'a');
+    board_push(&board, 0, 0, 'b');
+    board_push(&board, 0, 0, 'c');
     printf("Test réussi !\n\n");
 
     printf("Test de la fonction #board_height()\n");
@@ -33,6 +36,15 @@ int main(int argc, char** argv) {
     printf("Test de la fonction #board_top()\n");
     char c = board_top(&board, 0, 0);
     printf("Le hérisson %c est sur le dessus de la pile\n", c);
+    printf("Test réussi !\n\n");
+
+
+    board.cells[0][0].trap = true;
+    printf("Test de la fonction #cell_print()\n");
+    for(int j = 0; j < 4; j++) {
+        cell_print(&board, 0, 0, j);
+        printf("\n");
+    }
     printf("Test réussi !\n\n");
 
     printf("Test de la fonction #board_pop()\n");

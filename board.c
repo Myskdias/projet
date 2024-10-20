@@ -58,7 +58,7 @@ void board_pop(board_t* board, int line, int row) {
     if((*cell).n_hedgehog > 0) {
         (*cell).n_hedgehog--;
     } else {
-        printf("Be careful, you are trying to remove a hedgehog from a cell who doesn't have any.\n");
+        printf("Be careful, you are trying to remove a hedgehog from a cell which doesn't have any.\n");
     }
 }
 
@@ -86,7 +86,7 @@ void cell_print(board_t* board, int line, int row, int slice) {
             if(cell.trap) {
                 printf(" vvv ");
             } else {
-                printf("-----");
+                printf(" --- ");
             }
             break;
         case 1:
@@ -139,7 +139,7 @@ void cell_print(board_t* board, int line, int row, int slice) {
             } else {
                 print_bottom_char(cell);
             }
-            
+
             print_bottom_char(cell);
             printf(" ");
             break;
