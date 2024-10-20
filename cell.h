@@ -7,12 +7,12 @@
 
 typedef struct cell {
 
-    bool pieger;
-    int nbr_herisson;
-    char herissons[MAX_HERISSON_PAR_CASE];
+    bool trap;
+    int n_hedgehog;
+    char hedgehogs[MAX_HERISSON_PAR_CASE];
     
 } cell_t;
 
-cell_t creer_cellule(bool pieger);
+cell_t create_cell(bool trap);
 
 #endif//CELL_H

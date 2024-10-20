@@ -45,16 +45,18 @@ void free_board(board_t plateau) {
 
 //Rajoute un hérisson sur le haut de la pile d'une case
 void board_push(board_t* board, int line, int row, char ctn) {
-    cell_t cell = (*board).cells[line][row];
-    cell.nbr_herisson++;
-    cell.herissons[cell.nbr_herisson] = ctn;
+    cell_t *cell = &(*board).cells[line][row];
+    (*cell).n_hedgehog++;
+    (*cell).hedgehogs[(*cell).n_hedgehog] = ctn;
+    printf("%d\n", (*cell).n_hedgehog);
 }
 
 //Enlève le hérisson qui était sur le haut de la pile de la case
 void board_pop(board_t* board, int line, int row) {
-    cell_t cell = (*board).cells[line][row];
-    if(cell.nbr_herisson > 0) {
-        cell.nbr_herisson--;
+    cell_t *cell = &(*board).cells[line][row];
+    printf("Il y %d hérisson(s)\n",(*cell).n_hedgehog);
+    if((*cell).n_hedgehog > 0) {
+        (*cell).n_hedgehog--;
     } else {
         printf("Be careful, you are trying to remove a hedgehog from a cell who doesn't have any.\n");
     }

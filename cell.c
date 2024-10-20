@@ -1,9 +1,9 @@
 #include "cell.h"
 
-cell_t creer_cellule(bool pieger) {
+cell_t create_cell(bool trap) {
     cell_t cell;
-    cell.pieger = pieger;
-    cell.nbr_herisson = 0;
+    cell.trap = trap;
+    cell.n_hedgehog = 0;
     return cell;
 }
 
