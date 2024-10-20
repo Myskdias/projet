@@ -68,6 +68,12 @@ int board_height(board_t* board, int line, int row) {
 
 //Donne le nom de l'équipe du hérisson sur le dessus de la pile
 char board_top(board_t* board, int line, int row) {
-    return (*board).cells[line][row].hedgehogs[(*board).cells[line][row].n_hedgehog-1];
+    return board_peek(board, line, row, 0);
 }
+
+//Donne le nom de l'équipe du hérisson à la position pos //pos=0 => top
+char board_peek(board_t* board, int line, int row, int pos) {
+    cell_t cell = (*board).cells[line][row];
+    return cell.hedgehogs[cell.n_hedgehog - 1 - pos];
+} 
 
