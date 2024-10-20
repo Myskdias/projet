@@ -42,12 +42,11 @@ void print_first_line(board_t* board);
 
 void print_raws_name(board_t* board);
 
-void print_line(board_t* board, int line);
+void print_line(board_t* board, int line, int highlighted_line);
 
-void print_line_beginning(board_t* board, int line);
+void print_line_slice(board_t* board, int line, int highlighted_line, int slice);
 
-//the h stands for highlighted
-void print_hline_beginning(board_t* board, int line);
+void print_line_beginning(int line, int highlighted_line);
 
 void print_bottom_char(cell_t cell);
 

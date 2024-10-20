@@ -181,31 +181,83 @@ void print_team(board_t* board, int line, int row) {
 //Dessine le plateau
 void board_print(board_t* board, int highlighted_line) {
     print_first_line(board);
+    printf("\n");
     print_raws_name(board);
 
-
-
+    for(int i = 0; i < (*board).n_line; i++) {
+        print_line(board, i, highlighted_line);
+    }
     print_raws_name(board);
 }
 
 void print_first_line(board_t* board) {
-
+    printf("     START");
+    for(int i = 0; i < (*board).n_row - 2; i++) {
+        printf("     ");
+    }
+    printf("FINISH\n");
 }
 
 void print_raws_name(board_t* board) {
+    printf("     ");//5 blank spaces
+    for(int i = 0; i < (*board).n_row; i++) {
+        printf("  row ");
+    }
+    printf("\n");
 
+    //second line with the names
+    printf("     ");//5 blank spaces
+    for(int i = 0; i < (*board).n_row; i++) {
+        printf("   %c  ", 'a' + i);
+    }
+    printf("\n");
 }
 
-void print_line(board_t* board, int line) {
+void print_line(board_t* board, int line, int highlighted_line) {
+    //represent 5 lines on the terminal
 
+    //line 0
+    printf("    ");//4 white spaces
+    print_line_slice(board, line, highlighted_line, 0);
+
+    //line 1
+    printf("line");
+    print_line_slice(board, line, highlighted_line, 1);
+
+    //line 2
+    printf("  %d ", line + 1);
+    print_line_slice(board, line, highlighted_line, 2);
+
+    //line 3
+    printf("    ");//4 blank spaces
+    print_line_slice(board, line, highlighted_line, 3);
+
+    //line 4 : blank line
+    printf("\n");
 }
 
-void print_line_beginning(board_t* board, int line) {
-
+void print_line_slice(board_t* board, int line, int highlighted_line, int slice) {
+    print_line_beginning(line, highlighted_line);
+    for(int j = 0; j < (*board).n_row; j++) {
+        printf(" ");
+        cell_print(board, line,j, slice);
+    }
+    printf("\n");
 }
 
-//the h stands for highlighted
-void print_hline_beginning(board_t* board, int line) {
-    
+void print_line_beginning(int line, int highlighted_line) {
+    if(line == highlighted_line) {
+        printf(">");
+    } else {
+        printf(" ");
+    }
+}
+
+void print_blank_line(board_t* board) {
+    printf("     ");//5 blank spaces
+    for(int j = 0; j < (*board).n_row; j++) {
+        printf("      ");//6 blank spaces
+    }
+    printf("\n");
 }
 
