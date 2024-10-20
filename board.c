@@ -46,8 +46,8 @@ void free_board(board_t plateau) {
 //Rajoute un hérisson sur le haut de la pile d'une case
 void board_push(board_t* board, int line, int row, char ctn) {
     cell_t *cell = &(*board).cells[line][row];
-    (*cell).n_hedgehog++;
     (*cell).hedgehogs[(*cell).n_hedgehog] = ctn;
+    (*cell).n_hedgehog++;
 }
 
 //Enlève le hérisson qui était sur le haut de la pile de la case
@@ -64,5 +64,10 @@ void board_pop(board_t* board, int line, int row) {
 //Donne le nombre de hérisson sur la pile
 int board_height(board_t* board, int line, int row) {
     return (*board).cells[line][row].n_hedgehog;
+}
+
+//Donne le nom de l'équipe du hérisson sur le dessus de la pile
+char board_top(board_t* board, int line, int row) {
+    return (*board).cells[line][row].hedgehogs[(*board).cells[line][row].n_hedgehog-1];
 }
 

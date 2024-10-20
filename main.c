@@ -30,6 +30,11 @@ int main(int argc, char** argv) {
     printf("Il y %d hérisson(s) sur la pile\n", i);
     printf("Test réussi !\n\n");
 
+    printf("Test de la fonction #board_top()\n");
+    char c = board_top(&board, 0, 0);
+    printf("Le hérisson %c est sur le dessus de la pile\n", c);
+    printf("Test réussi !\n\n");
+
     printf("Test de la fonction #board_pop()\n");
     printf("Test numéro 1\n");
     board_pop(&board, 0, 0);
