@@ -252,12 +252,3 @@ void print_line_beginning(int line, int highlighted_line) {
         printf(" ");
     }
 }
-
-void print_blank_line(board_t* board) {
-    printf("     ");//5 blank spaces
-    for(int j = 0; j < (*board).n_row; j++) {
-        printf("      ");//6 blank spaces
-    }
-    printf("\n");
-}
-
