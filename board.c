@@ -43,7 +43,11 @@ void free_board(board_t plateau) {
     free(plateau.cells);
 }
 
-
-
+//Rajoute un hérisson sur le haut de la pile d'une case
+void board_push(board_t* board, int line, int row, char ctn) {
+    cell_t cell = (*board).cells[line][row];
+    cell.nbr_herisson++;
+    cell.herissons[cell.nbr_herisson] = ctn;
+}
 
 
