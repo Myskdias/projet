@@ -19,10 +19,14 @@ int main(int argc, char** argv) {
     printf("Création du plateau\n");
     fflush(stdout);
     board_t board = create_board(2, 2, 2, 2);
+
+    printf("Test de la fonction #board_push()\n");
+    fflush(stdout);
+    board_push(&board, 0, 0, 'a');
+
     printf("Destruction du plateau\n");
     fflush(stdout);
     free_board(board);
 
     return 0;
 }
-
