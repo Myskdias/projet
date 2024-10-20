@@ -47,6 +47,14 @@ int main(int argc, char** argv) {
     }
     printf("Test réussi !\n\n");
 
+    printf("Test de la fonction #board_print()\n");
+    board_print(&board, -1);
+    printf("Test réussi !\n\n");
+
+    printf("Test de la fonction #board_print()\n");
+    board_print(&board, 0);
+    printf("Test réussi !\n\n");
+
     printf("Test de la fonction #board_pop()\n");
     printf("Test numéro 1\n");
     board_pop(&board, 0, 0);
