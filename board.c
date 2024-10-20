@@ -48,7 +48,6 @@ void board_push(board_t* board, int line, int row, char ctn) {
     cell_t *cell = &(*board).cells[line][row];
     (*cell).n_hedgehog++;
     (*cell).hedgehogs[(*cell).n_hedgehog] = ctn;
-    printf("%d\n", (*cell).n_hedgehog);
 }
 
 //Enlève le hérisson qui était sur le haut de la pile de la case
@@ -60,5 +59,10 @@ void board_pop(board_t* board, int line, int row) {
     } else {
         printf("Be careful, you are trying to remove a hedgehog from a cell who doesn't have any.\n");
     }
+}
+
+//Donne le nombre de hérisson sur la pile
+int board_height(board_t* board, int line, int row) {
+    return (*board).cells[line][row].n_hedgehog;
 }
 

@@ -25,6 +25,11 @@ int main(int argc, char** argv) {
     board_push(&board, 0, 0, 'a');
     printf("Test réussi !\n\n");
 
+    printf("Test de la fonction #board_height()\n");
+    int i = board_height(&board, 0, 0);
+    printf("Il y %d hérisson(s) sur la pile\n", i);
+    printf("Test réussi !\n\n");
+
     printf("Test de la fonction #board_pop()\n");
     printf("Test numéro 1\n");
     board_pop(&board, 0, 0);
