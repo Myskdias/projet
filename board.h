@@ -38,5 +38,12 @@ void cell_print(board_t* board, int line, int row, int slice);
 //Dessine le plateau
 void board_print(board_t* board, int highlighted_line);
 
+void print_bottom_char(cell_t cell);
+
+void print_left(cell_t cell);
+
+void print_right(cell_t cell);
+
+void print_team(board_t* board, int line, int row);
 
 #endif//BOARD_H
