@@ -23,6 +23,14 @@ int main(int argc, char** argv) {
     printf("Test de la fonction #board_push()\n");
     fflush(stdout);
     board_push(&board, 0, 0, 'a');
+    printf("Test réussi !\n\n");
+
+    printf("Test de la fonction #board_pop()\n");
+    printf("Test numéro 1\n");
+    board_pop(&board, 0, 0);
+    printf("Test numéro 2\n");
+    board_pop(&board, 1, 0);
+    printf("Test réussi !\n\n");
 
     printf("Destruction du plateau\n");
     fflush(stdout);

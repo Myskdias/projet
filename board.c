@@ -50,4 +50,13 @@ void board_push(board_t* board, int line, int row, char ctn) {
     cell.herissons[cell.nbr_herisson] = ctn;
 }
 
+//Enlève le hérisson qui était sur le haut de la pile de la case
+void board_pop(board_t* board, int line, int row) {
+    cell_t cell = (*board).cells[line][row];
+    if(cell.nbr_herisson > 0) {
+        cell.nbr_herisson--;
+    } else {
+        printf("Be careful, you are trying to remove a hedgehog from a cell who doesn't have any.\n");
+    }
+}
 
