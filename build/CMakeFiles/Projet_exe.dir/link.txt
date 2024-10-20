@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/Projet_exe.dir/main.c.o CMakeFiles/Projet_exe.dir/board.c.o CMakeFiles/Projet_exe.dir/cell.c.o -o Projet_exe
