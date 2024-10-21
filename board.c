@@ -4,12 +4,10 @@
 #include "board.h"
 #include "cell.h"
 
-board_t create_board(int n_line, int n_row, int n_player, int n_hedgehog_player) {
+board_t create_board(int n_line, int n_row) {
     board_t board;
     board.n_line = n_line;
     board.n_row = n_row;
-    board.n_player = n_player;
-    board.n_hedgehog_player = n_hedgehog_player;
 
     printf("Malloc du tableau de cellule\n");
     fflush(stdout);

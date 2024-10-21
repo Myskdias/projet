@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 
     printf("Création du plateau\n");
     fflush(stdout);
-    board_t board = create_board(n_line, n_row, 2, 2);
+    board_t board = create_board(n_line, n_row);
 
     printf("Test de la fonction #board_push()\n");
     fflush(stdout);

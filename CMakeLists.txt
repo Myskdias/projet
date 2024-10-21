@@ -8,6 +8,8 @@ set(SOURCES
     board.h
     cell.c
     cell.h
+    game.c
+    game.h
 )
 
 add_executable(Projet_exe ${SOURCES})

@@ -8,12 +8,10 @@ typedef struct board {
     int n_line;
     int n_row;
     cell_t** cells; //faudra le malloc dans le init et le free à la fin du programme
-    int n_player;
-    int n_hedgehog_player; //nombre de hérisson par joueur
 
 } board_t;
 
-board_t create_board(int n_line, int n_row, int n_player, int n_hedgehog_player);
+board_t create_board(int n_line, int n_row);
 
 void free_board(board_t board);
 
