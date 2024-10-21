@@ -40,6 +40,7 @@ void print_first_line(board_t* board);
 
 void print_raws_name(board_t* board);
 
+//print une ligne de cellule
 void print_line(board_t* board, int line, int highlighted_line);
 
 void print_line_slice(board_t* board, int line, int highlighted_line, int slice);

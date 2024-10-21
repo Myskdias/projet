@@ -15,8 +15,10 @@ typedef struct game {
 
 game_t create_game(int n_line, int n_row, int n_player, int n_hedgehog_player);
 
-void do_turn();
+void do_turn(game_t* game);
 
-void do_player_turn(char team);
+void do_player_turn(game_t* game, char team);
+
+void ask_yn_question(char* c, char* question);
 
 #endif//GAME_H
