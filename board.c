@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<ctype.h>
+#include<stdbool.h>
 #include "board.h"
 #include "cell.h"
 
@@ -249,4 +250,14 @@ void print_line_beginning(int line, int highlighted_line) {
     } else {
         printf(" ");
     }
+}
+
+//teste si il y a au moins un hérisson à gauche de notre case
+bool hedgehog_on_the_left(board_t* board, int line, int row) {
+    for(int j = 0; j < row; j++) {
+        if(board_height(board, line, j) > 0) {
+            return true;
+        }
+    }
+    return false;
 }

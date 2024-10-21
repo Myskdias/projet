@@ -55,4 +55,7 @@ void print_right(cell_t cell);
 
 void print_team(board_t* board, int line, int row);
 
+//Renvoie vrai s'il y a au moins un hérisson à gauche de notre case
+bool hedgehog_on_the_left(board_t* board, int line, int row);
+
 #endif//BOARD_H

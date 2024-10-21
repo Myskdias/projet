@@ -21,4 +21,8 @@ void do_player_turn(game_t* game, char team);
 
 void ask_yn_question(char* c, char* question);
 
+void ask_hedgehog(game_t* game, char team, int* line, int* row);
+
+bool can_be_chosen(game_t* game, char team, int line, int row);
+
 #endif//GAME_H
